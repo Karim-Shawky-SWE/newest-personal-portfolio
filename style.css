@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(9, 0, 21);
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  font-family: "Delius", cursive;
+}
+
+nav {
+  background-color: rgb(33, 3, 49);
+  height: 8vh;
+  display: grid;
+  grid-template-columns: 1.5fr 0.75fr 2fr;
+  grid-template-areas: " logo empty  list ";
+}
+nav p {
+  grid-area: "empty";
+  display: grid;
+  place-items: center;
+}
+nav .logo {
+  color: rgb(198, 183, 206);
+  font-size: 50px;
+  font-family: "Imperial Script", cursive;
+  width: 50%;
+  text-align: center;
+  grid-area: "logo";
+}
+
+nav ul {
+  grid-area: "list";
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+nav ul li {
+  display: block;
+  width: calc(95% / 5);
+  height: 100%;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: rgb(198, 183, 206);
+  font-size: larger;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 15%;
+  transition: all 0.5s linear;
+}
+
+nav a:hover {
+  background-color: rgb(69, 4, 102);
+  border-bottom: 5px solid rgb(128, 8, 188);
+}
+.about--me {
+  height: 90vh;
+  color: rgb(198, 183, 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.first--section {
+  display: flex;
+}
+.aura {
+  display: grid;
+  place-items: center;
+  background-color: rgb(250, 244, 254);
+  width: 13vw;
+  height: 13vw;
+  font-size: 10vw;
+  margin: 0 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 13vw rgb(148, 43, 201);
+}
+
+.description h2 {
+  font-size: 40px;
+}
+#first--description--part {
+  text-decoration: underline;
+  font-size: 20px;
+}
+#second--description--part {
+  font-size: 30px;
+}
+
+span {
+  color: rgb(128, 8, 188);
+}
+
+#third--description--part {
+  font-size: 25px;
+}
+
+.second--section {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.third--section {
+  margin-top: 75px;
+  font-size: larger;
+}
+
+.projects--section {
+  height: 100vh;
+}
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 0;
+  height: 95vh;
+}
+.container {
+  color: rgb(202, 169, 219);
+  border-top: solid 3px rgb(128, 8, 188);
+  background-image: linear-gradient(
+    to left,
+    rgb(25, 2, 48),
+    rgb(54, 4, 106),
+    rgb(83, 30, 141),
+    rgb(54, 4, 106),
+    rgb(25, 2, 48)
+  );
+  width: 85%;
+  height: 70%;
+  padding: 1vw;
+  border-radius: 12px;
+  transition: all 0.5s ease-in;
+}
+
+.shadowing {
+  box-shadow: 0 0 20px rgb(100, 5, 173);
+}
+
+.container:hover {
+  width: 90%;
+  height: 80%;
+}
+.projects-footer {
+  width: 30%;
+  height: 60%;
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(126, 55, 176);
+  box-shadow: 0 0 30vw rgb(148, 43, 201);
+  filter: blur(12px);
+}
+.header {
+  color: rgb(202, 169, 219);
+  width: 25%;
+  font-size: x-large;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+.skills--container {
+  height: 95vh;
+  position: relative;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85%;
+}
+.skills div {
+  margin: 15px 0;
+}
+.skills img {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(241, 214, 255);
+  border-radius: 12px;
+  margin: 0 10px;
+}
+
+.skills .logo {
+  color: rgb(198, 183, 206);
+  font-size: 50px;
+  font-family: "Imperial Script", cursive;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  bottom: 12%;
+}
+.working--experience {
+  height: 95vh;
+}
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(198, 183, 206);
+  height: 95%;
+  font-size: larger;
+}
+
+.contacts--container {
+  height: 100vh;
+}
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(198, 183, 206);
+  font-size: larger;
+  height: 95%;
+}
+
+.contact--div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hidden {
+  transform: translateY(8rem);
+  opacity: 0;
+}
+
+.section {
+  transition: all 0.5s ease-in;
+}
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
